@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="upload-container">
+        <input type="file" id="fileInput" accept=".csv">
+        <label for="fileInput">Upload CSV</label>
+        <span id="fileNameDisplay"></span>
+    </div>
+
+    <div class="title">Reports</div>
+
+    <div class="row">
+        <div class="form-group">
+            <label for="report-type">Report Type:</label>
+            <select id="report-type" name="report-type">
+                <option value="total-emissions">Total Emissions</option>
+                <!-- Add other options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" name="start-date" placeholder="Select Start Date">
+        </div>
+        <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" name="end-date" placeholder="Select End Date">
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row-4">
+        <div class="form-group">
+            <label for="company">Company <span class="required">*</span></label>
+            <input type="text" id="company" name="company" placeholder="Company">
+            <span class="close-btn" id="close-btn-company">&times;</span>
+        </div>
+        <div class="form-group">
+            <label for="delivery-services">Delivery Services Provider <span class="required">*</span></label>
+            <input type="text" id="delivery-services-Provider" name="delivery-services-Provider" placeholder="Delivery Services Provider">
+            <span class="close-btn" id="close-btn-delivery-services">&times;</span>
+        </div>
+        <div class="form-group">
+            <label for="route-id">Route ID</label>
+            <input type="text" id="route-id" name="route-id" placeholder="Route ID">
+        </div>
+        <div class="form-group">
+            <label for="reference-no">Reference No</label>
+            <input type="text" id="reference-no" name="reference-no" placeholder="Reference No">
+        </div>
+    </div>
+
+    <div class="chart-type-select">
+        <label for="chart-type">Select Chart Type:</label>
+        <select id="chart-type">
+            <option value="column">Column</option>
+            <option value="line">Line</option>
+            <option value="pie">Pie</option>
+            <option value="bar">Bar</option>
+            <option value="area">Area</option>
+            <option value="scatter">Scatter</option>
+            <option value="bubble">Bubble</option>
+            <option value="heatmap">Heatmap</option>
+            <option value="polar">Polar</option>
+            <option value="waterfall">Waterfall</option>
+        </select>
+    </div>
+
+    <div class="row-generate">
+        <div class="generate-report">
+            <button type="button">Create Report</button>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="graphs-title">Graphs</div>
+
+    <table id="dataTable" border="1"></table>
+    <div id="chartsContainer"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

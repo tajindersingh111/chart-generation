@@ -1,0 +1,175 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eceff3;
+}
+
+.container {
+    background-color: #eceff3;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.upload-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.upload-container input[type="file"] {
+    display: none;
+}
+
+.upload-container label {
+    background-color: #5ac059;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.title {
+    text-align: right;
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #5ac059;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #eceff3;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.close-btn {
+    position: absolute;
+    right: 2px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 23px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row input[type="text"], .row input[type="date"], .row select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.row input[type="text"]#report-type, .row select#report-type {
+    flex: 0.3;
+}
+
+.row input[type="date"]#start-date, .row input[type="date"]#end-date {
+    flex: 0.3;
+}
+
+.line {
+    border-top: 2px solid #5ac059;
+    margin: 40px 0;
+}
+
+.row-4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-4 .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.row-4 .form-group:last-child {
+    margin-right: 0;
+}
+
+.row-generate {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.generate-report button {
+    background-color: #5ac059;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.graphs-title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.required {
+    color: red;
+}
+
+#fileNameDisplay {
+    margin-left: 10px;
+    color: #333;
+}
+
+.chart-type-select {
+    margin-bottom: 20px;
+    text-align: center;
+}
